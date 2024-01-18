@@ -6,4 +6,11 @@ mydb = mysql.connector.connect(
 
 
 )
-print(mydb)
+
+
+#mycursor = mydb.cursor()
+#mycursor.execute("create database mydatabase")
+mycursor = mydb.cursor()
+mycursor.execute("show databases")
+for x in mycursor:
+    print(x)
