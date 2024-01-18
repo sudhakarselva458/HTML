@@ -18,4 +18,4 @@ mycursor.execute("show tables")
 for x in mycursor:
     print(x)"""
 mycursor=mydb.cursor()
-mycurosr.execute("alter table student change id id int auot-increment primary key")
+mycursor.execute("alter table student add auto-increment(id)")
