@@ -1,3 +1,4 @@
+
 a=input("username:")
 b=input("password:")
 #a="sudhakar"
@@ -10,4 +11,5 @@ elif(a!="sudhakar" or b!="selva"):
             print("invalid details")
 else:
     print("invalid user name")
-a=
+
+
