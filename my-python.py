@@ -9,4 +9,5 @@ elif(a=="sudhakar" or b!="selva"):
 elif(a!="sudhakar" or b!="selva"):
             print("invalid details")
 else:
-    print("invalid user name ")
+    print("invalid user name")
+a=
