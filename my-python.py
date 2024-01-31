@@ -20,7 +20,7 @@ def update(name,city,commission):
     con=mydb.cursor()
     sql="update salesmen set name=%S,city=%S,commission=%S"
     salesmen=(name,city,commission)
-    cn.execute(sql,salesmen)
+    con.execute(sql,salesmen)
     con.commit()
     print("data updated successfully")
 def select():
