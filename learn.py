@@ -15,5 +15,6 @@ def insert(name,city,commission):
     #user input
     name=input("Enter name:")
     city=input("Enter city:")
-    commission=input("Enter commission")
+    commission=input("Enter commission:")
+
 

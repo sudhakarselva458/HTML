@@ -10,7 +10,7 @@ mydb=mysql.connector.connect(
 )
 def insert(id,name,city,commission):
     con=mydb.cursor()
-    sql="insert into table salesmen(id,name,city,commission)  values(%S,%S,%S,%S)"
+    sql="insert into salesmen(id,name,city,commission) values(%s,%s,%s,%s)"
     salesmen=(id,name,city,commission)
     con.execute(sql,salesmen)
     con.commit()
@@ -18,9 +18,9 @@ def insert(id,name,city,commission):
 
 def update(id,name,city,commission):
     con=mydb.cursor()
-    sql="update salesmen set id=%S name=%S,city=%S,commission=%S where id=%S"
+    sql="update salesmen set id=%s name=%s,city=%s,commission=%s where id=%s"
     salesmen=(id,name,city,commission)
-    cn.execute(sql,salesmen)
+    con.execute(sql,salesmen)
     con.commit()
     print("data updated successfully")
 def select():
@@ -32,9 +32,10 @@ def select():
     print(tabulate(result,headers=["id","name","city","commission"]))
 def delete(id):
     con=mydb.cursor()
-    sql="delete from salesmen where id=%S"
+    sql="delete from salesmen where id=%s"
     salesmen=(id,)
     con.execute(sql,salemen)
+    con.commit()
     print("data deleted successully")
 
 while True:
