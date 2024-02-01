@@ -13,7 +13,7 @@ def insert(id,name,city,commission):
     sql="insert into salesmen(id,name,city,commission) values(%s,%s,%s,%s)"
     salesmen=(id,name,city,commission)
     con.execute(sql,salesmen)
-    con.commit()
+    mydb.commit()
     print("data inserted successfully")
 
 def update(id,name,city,commission):
@@ -21,7 +21,7 @@ def update(id,name,city,commission):
     sql="update salesmen set id=%s name=%s,city=%s,commission=%s where id=%s"
     salesmen=(id,name,city,commission)
     con.execute(sql,salesmen)
-    con.commit()
+    mydb.commit()
     print("data updated successfully")
 def select():
     con=mydb.cursor()
@@ -35,7 +35,7 @@ def delete(id):
     sql="delete from salesmen where id=%s"
     salesmen=(id,)
     con.execute(sql,salemen)
-    con.commit()
+    mydb.commit()
     print("data deleted successully")
 
 while True:
