@@ -5,7 +5,7 @@ import mysql.connector
 mydb=mysql.connector.connect(
     host="localhost",
     username="root",
-    password="Sudhakar@95",
+    password="password",
     database="learning"
 )
 def insert(id,name,city,commission):
